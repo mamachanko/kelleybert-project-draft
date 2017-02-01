@@ -1,0 +1,14 @@
+---
+applications:
+- name: kelleybert-api
+  memory: 64M
+  routes:
+    - route: kelleybert-2.cfapps.io/api
+  path: ./api
+  buildpack: staticfile_buildpack
+- name: kelleybert-web-client
+  memory: 64M
+  routes:
+    - route: kelleybert-2.cfapps.io/
+  path: ./web-client/dist
+  buildpack: staticfile_buildpack
